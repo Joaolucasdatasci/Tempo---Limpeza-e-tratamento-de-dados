@@ -61,11 +61,15 @@ As colunas `Temperatura` e `Umidade` foram analisadas com `.describe()` e visual
 
 ![Boxplot da Temperatura](img/temperatura_boxplot.png)
 
+**Histograma de Temperatura (antes do tratamento)**
+
+![Histograma da Temperatura](img/temperatura_histograma.png)
+
 **Boxplot de Umidade (antes do tratamento)**
 
 ![Boxplot da Umidade](img/umidade_boxplot.png)
 
-**Histograma de Umidade**
+**Histograma de Umidade (antes do tratamento)**
 
 ![Histograma da Umidade](img/umidade_histograma.png)
 
@@ -115,6 +119,24 @@ A partir disso, foi montado um checklist de tratamento no próprio notebook para
 | Máximo | 1220 | 85 |
 
 O desvio padrão caiu de **306.43 para 6.56** e o valor máximo saiu de **1220 para 85**, confirmando que o outlier foi corrigido e a distribuição da coluna passou a refletir valores plausíveis de temperatura.
+
+### 9. Visualização após o tratamento
+
+Para confirmar visualmente o efeito da limpeza, `Temperatura` e `Umidade` foram novamente plotadas em boxplot e histograma, já com os dados tratados.
+
+**Temperatura (depois do tratamento)**
+
+![Boxplot da Temperatura depois do tratamento](img/temperatura_boxplot_depois.png)
+![Histograma da Temperatura depois do tratamento](img/temperatura_histograma_depois.png)
+
+Comparando com os gráficos "antes" (seção 3), o boxplot deixa de mostrar o ponto isolado muito acima da caixa (outlier de 1220°), e o histograma passa a mostrar uma distribuição concentrada entre 64° e 85°, sem o espalhamento causado pelo valor extremo.
+
+**Umidade (depois do tratamento)**
+
+![Boxplot da Umidade depois do tratamento](img/umidade_boxplot_depois.png)
+![Histograma da Umidade depois do tratamento](img/umidade_histograma_depois.png)
+
+Da mesma forma, o boxplot de `Umidade` deixa de apresentar o ponto fora da faixa de 0–100% (o valor 200% tratado), e o histograma reflete apenas valores dentro do domínio válido.
 
 ## Resultado
 
